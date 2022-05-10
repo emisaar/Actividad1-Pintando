@@ -1,5 +1,5 @@
 """
-Game: Paint
+Game: Paint (May 9th, 2022)
 Student 1: Alejandro Díaz Villagómez | A01276769
 Student 2: Emiliano Saucedo Arriola | A01659258
 
@@ -7,10 +7,10 @@ Paint, for drawing shapes.
 
 Exercises
 
-1. Add a color.
-2. Complete circle.
-3. Complete rectangle. [DONE]
-4. Complete triangle. [DONE]
+1. Add a color (orange). [DONE BY ALEJANDRO]
+2. Complete circle. [DONE BY ALEJANDRO]
+3. Complete rectangle. [DONE BY EMILIANO]
+4. Complete triangle. [DONE BY EMILIANO]
 5. Add width parameter.
 """
 
@@ -40,10 +40,18 @@ def square(start, end):
 
     end_fill()
 
-
-def circle(start, end):
+# Renaming function in order to avoid redundancy
+def circle_func(start, end):
     """Draw circle from start to end."""
-    pass  # TODO
+    up()
+    goto(start.x, start.y)
+    down()
+
+    begin_fill()
+    # Circle - Using the circle() feature from Turtle. It needs the radius as a parameter 
+    circle(end.x - start.x)
+    end_fill()
+
 
 
 def rectangle(start, end):
@@ -107,9 +115,10 @@ onkey(lambda: color('white'), 'W')
 onkey(lambda: color('green'), 'G')
 onkey(lambda: color('blue'), 'B')
 onkey(lambda: color('red'), 'R')
+onkey(lambda: color('orange'), 'O')
 onkey(lambda: store('shape', line), 'l')
 onkey(lambda: store('shape', square), 's')
-onkey(lambda: store('shape', circle), 'c')
+onkey(lambda: store('shape', circle_func), 'c')
 onkey(lambda: store('shape', rectangle), 'r')
 onkey(lambda: store('shape', triangle), 't')
 done()
