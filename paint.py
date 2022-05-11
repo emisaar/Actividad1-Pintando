@@ -11,7 +11,6 @@ Exercises
 2. Complete circle. [DONE BY ALEJANDRO]
 3. Complete rectangle. [DONE BY EMILIANO]
 4. Complete triangle. [DONE BY EMILIANO]
-5. Add width parameter.
 """
 
 from turtle import *
